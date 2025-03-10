@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Audio files
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.m4a
+
+# Logs
+*.log
+logs/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Test files
+test_chunks/
+test_*.py
+!test_youtube_audio.py
+
+# YouTube cookies (may contain sensitive information)
+youtube_cookies.txt
+
+# Browser tools
+browser-tools-mcp-main/
+
+# Cursor specific
+.cursorrules 

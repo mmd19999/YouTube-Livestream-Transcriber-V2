@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Livestream Transcriber</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Livestream Transcriber</h1>
+            <div id="connection-status">
+                <span id="status-indicator" class="connected"></span>
+                <span id="status-text">Connected</span>
+                <span id="client-count">(1 client connected)</span>
+            </div>
+        </header>
+
+        <main>
+            <section id="livestream-section">
+                <h2>Livestream Connection</h2>
+                <div class="input-group">
+                    <input type="text" id="youtube-url" placeholder="Enter YouTube Livestream URL">
+                    <button id="connect-button">Connect</button>
+                </div>
+            </section>
+
+            <section id="transcription-section">
+                <h2>Live Transcription</h2>
+                <div id="transcription-container">
+                    <p class="placeholder">Transcription will appear here once connected to a livestream...</p>
+                </div>
+            </section>
+
+            <section id="topics-section">
+                <h2>Topic History</h2>
+                <div id="topics-container">
+                    <p class="placeholder">Topics will be detected and displayed here...</p>
+                </div>
+            </section>
+
+            <!-- Debug Console Section -->
+            <section id="debug-section" class="collapsed">
+                <div class="debug-header">
+                    <h2>Debug Console</h2>
+                    <div class="debug-controls">
+                        <button id="debug-clear" title="Clear console">Clear</button>
+                        <button id="debug-toggle" title="Toggle console">▼</button>
+                    </div>
+                </div>
+                <div class="debug-filters">
+                    <label><input type="checkbox" class="debug-filter" data-type="info" checked> Info</label>
+                    <label><input type="checkbox" class="debug-filter" data-type="warn" checked> Warning</label>
+                    <label><input type="checkbox" class="debug-filter" data-type="error" checked> Error</label>
+                    <label><input type="checkbox" class="debug-filter" data-type="api" checked> API</label>
+                    <label><input type="checkbox" class="debug-filter" data-type="llm" checked> LLM</label>
+                </div>
+                <div id="debug-container">
+                    <p class="placeholder">Debug messages will appear here...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>YouTube Livestream Transcriber &copy; 2024</p>
+        </footer>
+    </div>
+
+    <!-- Socket.IO client library -->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <!-- Main JavaScript file -->
+    <script src="static/js/main.js"></script>
+    <!-- Debug Console JavaScript -->
+    <script src="static/js/debug-console.js"></script>
+</body>
+
+</html>
